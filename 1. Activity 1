@@ -1,0 +1,61 @@
+package cc3.pkg1b;
+import java.util.Scanner;
+
+public class CC31B {
+
+    public static void main(String[] args) {
+        
+        display();
+        
+    }
+   
+
+    static void display() {
+     
+    
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of array: ");
+        int size = sc.nextInt();
+        int[] a = new int [size];
+        
+        System.out.println("Enter Elements: ");
+        for (int i = 0; i < a.length; i++) {
+        a[i] = sc.nextInt();
+        }
+        System.out.println("");
+        for (int i = 0; i < a.length; i++) {
+        System.out.println("The mean of the array is : " + mean (a));
+        System.out.println("The mode of the array is : " + mode (a));
+        break;
+        }
+    }
+    
+    static double mean(int a [] ) {
+        double sum = 0;
+    for (int i = 0; i < a.length; i++) {
+        sum += a[i];
+    }
+    return sum / a.length;
+        }
+    static double mode (int[] a) {
+        int index = 0  ;
+        int soFar = 1 ; 
+        int count = 1 ; 
+        for(int k =1;   k < a.length; k++){
+            if (a[k-1] == a[k]){
+                count++ ; }
+            if(count > soFar)
+            { 
+                soFar = count ; 
+                index = k ; 
+            }
+            else {
+                count = 1 ; 
+            }
+        }
+        return a[index] ; 
+        
+    }
+    
+    
+        }
