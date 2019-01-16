@@ -1,0 +1,93 @@
+
+package classesandobjects;
+import java.util.Scanner;
+
+public class Dog {
+    String name;
+    int age;
+    String breed;
+    char gender;
+    
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        
+       /* 
+        System.out.println("What is your dog's Breed?:");
+        String dogBreed = sc.nextLine();
+        System.out.println("What is your dog's gender?: ");
+        String dogGender = sc.nextLine();*/
+        
+    Dog a = new Dog();
+    
+        System.out.println("Dog 1");
+        System.out.println("");
+    
+    String dog1 = a.getName();
+        
+    int dog2 = a.getAge(10);
+    
+    String dog3 = a.getBreed();
+    
+    char dog4 = a.getGender();
+        System.out.println("");
+    
+        System.out.println("Dog 2");
+        System.out.println("");
+    
+    String doga = a.getName();
+        
+    int dogb = a.getAge(10);
+    
+    String dogc = a.getBreed();
+    
+    char dogd = a.getGender();
+    
+    System.out.println("");
+        System.out.println("Dog 1");
+    System.out.println("Name:" + dog1);
+    System.out.println("Age:" + dog2);
+    System.out.println("Breed:" + dog3);
+    System.out.println("Gender:" + dog4);
+    System.out.println("");
+    
+  
+    System.out.println("Dog 2");
+    System.out.println("Name:" + doga);
+    System.out.println("Age:" + dogb);
+    System.out.println("Breed:" + dogc);
+    System.out.println("Gender:" + dogd);
+    System.out.println("");
+}
+
+
+public String getName(){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("What is your dog's name?: ");
+        String dogName = sc.nextLine();
+        return dogName;
+        }
+
+public int getAge(int a){
+    Scanner sc = new Scanner(System.in);
+System.out.println("What is your dog's Age?:");
+        int dogAge = sc.nextInt();
+        return dogAge;
+}
+public String getBreed(){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("What is your dog's Breed?: ");
+        String dogBreed = sc.nextLine();
+        return dogBreed;
+    
+}
+public char getGender(){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("What is your dog's Gender?: ");
+        char dogBreed = sc.next().charAt(0);
+        return dogBreed;    
+
+
+
+}
+}
+
