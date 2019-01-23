@@ -1,0 +1,109 @@
+
+public class StudentAccount {
+    public static void main (String [] args){
+        
+        StudentInfo Uni = new StudentInfo ("CITCS", "2nd Term 2018-2019");
+        
+        Uni.setidNumber("18-4429-740");
+        //int getidNumber = Uni.getidNumber();
+        
+        Uni.setfamilyName("Litaoen");
+        //String getfamilyName = Uni.getfamilyName();
+        
+        Uni.setfirstName("Brixon");
+        //String getfirstName = Uni.getfirstName();
+        
+        Uni.setacadProgram("BSIT");
+        //String getacadProgram = Uni.getacadProgram();
+        
+        Uni.setTrack("Net Sec");
+        //String getTrack = Uni.getTrack();
+        
+        Uni.print();
+    }
+        
+}
+
+
+//ANOTHER CLASS
+
+public class StudentInfo {
+    String university;
+    String college;
+    String term;
+    
+    private static String idNumber;
+    private static String familyName;
+    private static String firstName;
+    private static String acadProg;
+    private static String track;
+    
+    
+     StudentInfo(String college, String term){
+        this.university = "University of the Cordilleras";
+        this.college = college;
+        this.term = term;
+        
+
+         
+         
+         
+         
+     }
+    
+    
+    public void setidNumber(String idNumber){
+        this.idNumber = idNumber;
+    }
+    public String getidNumber(){
+        return idNumber;
+    }
+    
+    
+    public void setfamilyName(String familyName){
+        this.familyName = familyName;
+    }
+    public String getfamilyName(){
+        return familyName;
+    }
+    
+    
+    public void setfirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public String getfirstName(){
+        return firstName;
+    }
+    
+    
+    public void setacadProgram(String acadProg){
+        this.acadProg = acadProg;
+    }
+    public String getacadProgram(){
+        return acadProg;
+    }
+    
+    
+    public void setTrack(String acadProg){
+        this.track = acadProg;
+    }
+    public String getTrack(){
+        return track;
+    }
+    
+    
+    public void print(){
+        System.out.println("=================================");
+         System.out.println("     " + university);
+         System.out.println("             " +college);
+         System.out.println("             "+ term);
+         System.out.println("");
+         System.out.println("Student Info:");
+         System.out.println("");
+         System.out.println("ID Number:" + idNumber);
+         System.out.println("Name:" + familyName + "," + firstName);
+         System.out.println("Academic Program" + acadProg + "-" + track);
+    }
+    
+    
+}
