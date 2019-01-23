@@ -2,92 +2,123 @@
 package classesandobjects;
 import java.util.Scanner;
 
+public class ClassesAndObjects {
+    static Scanner sc = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        
+        Dog bantay = new Dog();
+        //create another dog object 
+    
+        System.out.println("Enter name for dog bantay: ");
+        String dogName = sc.next();
+        bantay.setName(dogName);
+        String getName = bantay.getName();
+        
+        System.out.println("Enter age for " + dogName + ": ");
+        int dogAge = sc.nextInt();
+        bantay.setAge(dogAge);
+        int getAge = bantay.getAge();
+        
+        System.out.println("Enter breed for " + dogName + ": ");
+        String dogBreed = sc.next();
+        bantay.setBreed(dogBreed);
+        String getBreed = bantay.getBreed();
+        
+        System.out.println("Enter gender for " + dogName + ": ");
+        char dogGender = sc.next().charAt(0);
+        bantay.setGender(dogGender);
+        char getGender = bantay.getGender();
+        
+     
+
+     
+     Cardo Dalisay = new Cardo();
+     
+     System.out.println("Enter name for dog cardo: ");
+        String cardoName = sc.next();
+        Dalisay.setName(cardoName);
+        String a = Dalisay.getName();
+        
+        System.out.println("Enter age for " + cardoName + ": ");
+        int cardoAge = sc.nextInt();
+        Dalisay.setAge(cardoAge);
+        int b = Dalisay.getAge();
+        
+        System.out.println("Enter breed for " + cardoName + ": ");
+        String cardoBreed = sc.next();
+        Dalisay.setBreed(cardoBreed);
+        String c = Dalisay.getBreed();
+        
+        System.out.println("Enter gender for " + cardoName + ": ");
+        char cardoGender = sc.next().charAt(0);
+        Dalisay.setGender(cardoGender);
+        char d = Dalisay.getGender();
+     
+
+     System.out.println("");
+     System.out.println("Bantay ");
+     System.out.println("Name: " + getName);
+     System.out.println("Age: " + getAge);
+     System.out.println("Breed: " + getBreed);
+     System.out.println("Gender: " + getGender);
+     System.out.println("");
+     System.out.println("Cardo ");
+     System.out.println("Name: " + a);
+     System.out.println("Age: " + b);
+     System.out.println("Breed: " + c);
+     System.out.println("Gender: " + d);
+     System.out.println("");
+    }
+    
+}
+
+
+
+package classesandobjects;
+import java.util.Scanner;
+
 public class Dog {
     String name;
     int age;
     String breed;
     char gender;
     
-    public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
+   
+
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    
+    
+    public void setAge(int age){
+         this.age = age;
+}
+    public int getAge(){
+         return age;
+}
+
+
+    public void setBreed(String breed){
+         this.breed = breed;
+}
+    public String getBreed(){
+         return breed;
         
-       /* 
-        System.out.println("What is your dog's Breed?:");
-        String dogBreed = sc.nextLine();
-        System.out.println("What is your dog's gender?: ");
-        String dogGender = sc.nextLine();*/
-        
-    Dog a = new Dog();
-    
-        System.out.println("Dog 1");
-        System.out.println("");
-    
-    String dog1 = a.getName();
-        
-    int dog2 = a.getAge(10);
-    
-    String dog3 = a.getBreed();
-    
-    char dog4 = a.getGender();
-        System.out.println("");
-    
-        System.out.println("Dog 2");
-        System.out.println("");
-    
-    String doga = a.getName();
-        
-    int dogb = a.getAge(10);
-    
-    String dogc = a.getBreed();
-    
-    char dogd = a.getGender();
-    
-    System.out.println("");
-        System.out.println("Dog 1");
-    System.out.println("Name:" + dog1);
-    System.out.println("Age:" + dog2);
-    System.out.println("Breed:" + dog3);
-    System.out.println("Gender:" + dog4);
-    System.out.println("");
-    
-  
-    System.out.println("Dog 2");
-    System.out.println("Name:" + doga);
-    System.out.println("Age:" + dogb);
-    System.out.println("Breed:" + dogc);
-    System.out.println("Gender:" + dogd);
-    System.out.println("");
 }
-
-
-public String getName(){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("What is your dog's name?: ");
-        String dogName = sc.nextLine();
-        return dogName;
-        }
-
-public int getAge(int a){
-    Scanner sc = new Scanner(System.in);
-System.out.println("What is your dog's Age?:");
-        int dogAge = sc.nextInt();
-        return dogAge;
-}
-public String getBreed(){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("What is your dog's Breed?: ");
-        String dogBreed = sc.nextLine();
-        return dogBreed;
     
+    
+    public void setGender(char gender){
+         this.gender = gender;
 }
-public char getGender(){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("What is your dog's Gender?: ");
-        char dogBreed = sc.next().charAt(0);
-        return dogBreed;    
-
-
-
+    public char getGender(){
+         return gender;
 }
 }
+
 
