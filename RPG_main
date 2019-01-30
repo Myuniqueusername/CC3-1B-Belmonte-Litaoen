@@ -1,0 +1,24 @@
+public static void main(String[] args) {
+        Dice dieA = new Dice();
+        Dice dieB = new Dice();
+        Dice dieC = new Dice();
+        
+        
+        
+        Character Mar = new Character ("Reymar", dieA.roll(), dieB.roll(), dieC.roll());
+        
+        Mar.print();
+        
+        System.out.println("");
+        
+        Dice die1 = new Dice();
+        Dice die2 = new Dice();
+        Dice die3 = new Dice();
+        
+        
+        Character Brix = new Character ("Brixon, ", die1.roll(), die2.roll(), die3.roll());
+        
+        Brix.print();
+        
+        
+    }
