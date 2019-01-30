@@ -1,0 +1,73 @@
+public class Character {
+    
+    static Dice die = new Dice();
+    
+
+    private int Strength, dexterity, intelligence, maxlife, currentlife;
+    private String name;
+    
+            
+            
+public Character(String n, int s, int d, int i) {
+    
+    this.name = n;
+    this.Strength = s ;
+    this.dexterity = d ;
+    this.intelligence = i ;
+    maxlife = (die.roll()+2)*10;
+    currentlife = maxlife;
+}
+
+
+public int attack() {
+    int att = die.roll() + (this.Strength);
+    return att;
+}
+
+public void wound(int damage) {
+    int dam = (die.roll() + Strength + dexterity + intelligence);
+    this.currentlife = currentlife - dam;
+}
+
+public void heal(int heal) {
+    this.currentlife = currentlife + heal;
+    if (currentlife > this.maxlife){
+        currentlife = maxlife;
+    }
+}
+
+public String getName() {
+    return name;
+}
+
+public int getStrength() {
+    return Strength;
+}
+
+public int getDexterity() {
+    return dexterity;
+}
+
+
+public int getIntelligence() {
+    return intelligence;
+}
+
+public int getCurrentLife() {
+    return currentlife;
+}
+
+public int getMaxLife() {
+    return maxlife;
+}
+
+public void print(){
+    
+    System.out.println("Player: " + name);
+    System.out.println("Strength: " + Strength);
+    System.out.println("Dexterity: " + dexterity);
+    System.out.println("Intelligence: " + intelligence);
+    System.out.println("Health: " + maxlife);
+    
+    
+}
