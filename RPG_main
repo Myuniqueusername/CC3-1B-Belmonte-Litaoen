@@ -1,7 +1,25 @@
-public static void main(String[] args) {
-        Dice dieA = new Dice();
-        Dice dieB = new Dice();
-        Dice dieC = new Dice();
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rpg;
+
+/**
+ *
+ * @author PC 06
+ */
+public class RPG {
+
+    static    Dice dieA = new Dice();
+    static    Dice dieB = new Dice();
+    static    Dice dieC = new Dice();
+    
+    static    Dice die1 = new Dice();
+    static    Dice die2 = new Dice();
+    static    Dice die3 = new Dice();
+    public static void main(String[] args) {
+        
         
         
         
@@ -11,14 +29,40 @@ public static void main(String[] args) {
         
         System.out.println("");
         
-        Dice die1 = new Dice();
-        Dice die2 = new Dice();
-        Dice die3 = new Dice();
+    
         
         
         Character Brix = new Character ("Brixon, ", die1.roll(), die2.roll(), die3.roll());
         
         Brix.print();
         
+        //int brixLayp = Brix.getCurrentLife();
+       // int marLayp = Mar.getCurrentLife();
+       // int marAtk = Mar.attack();
+       int i = 1;
+       boolean x = true;
+        do{
+            System.out.println("Round " + i);
+            System.out.println("FIGHT!");
+            System.out.println("Mar attacked:" + Mar.attack());
+            System.out.println("Brixon's HP:" + Brix.currentlife);
+            System.out.println("Brixon attacked:" + Brix.attack());
+            System.out.println("Mar's HP:" + Mar.currentlife);
+            i ++;
+            
+            if (Brix.currentlife <= 0 || Mar.currentlife <= 0)
+                x = false;
+            if (Brix.currentlife <= 0){
+                System.out.println("Mar wins!"); }
+            if (Mar.currentlife <= 0){
+                System.out.println("Brixon wins");
+            }
+        }while (x);
         
     }
+    
+    //public static void fight(){
+        
+       // Character.attack();
+    //}
+}
