@@ -1,10 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rpg;
+
+/**
+ *
+ * @author PC 06
+ */
 public class Character {
-    
-    static Dice die = new Dice();
+     static Dice die = new Dice();
     
 
-    private int Strength, dexterity, intelligence, maxlife, currentlife;
-    private String name;
+    int Strength, dexterity, intelligence, maxlife, currentlife;
+    String name;
     
             
             
@@ -14,25 +24,25 @@ public Character(String n, int s, int d, int i) {
     this.Strength = s ;
     this.dexterity = d ;
     this.intelligence = i ;
-    maxlife = (die.roll()+2)*10;
+    maxlife = (die.roll()+10)*10;
     currentlife = maxlife;
 }
 
 
 public int attack() {
-    int att = die.roll() + (this.Strength);
+    int att = die.roll() + Strength + dexterity + intelligence ;
     return att;
 }
 
 public void wound(int damage) {
-    int dam = (die.roll() + Strength + dexterity + intelligence);
-    this.currentlife = currentlife - dam;
+    int dam = attack();
+    this.currentlife -= dam;
 }
 
 public void heal(int heal) {
-    this.currentlife = currentlife + heal;
-    if (currentlife > this.maxlife){
-        currentlife = maxlife;
+    heal = die.roll();
+    while (currentlife < maxlife){
+        this.currentlife += maxlife;
     }
 }
 
@@ -41,16 +51,16 @@ public String getName() {
 }
 
 public int getStrength() {
-    return Strength;
+    return Strength*2;
 }
 
 public int getDexterity() {
-    return dexterity;
+    return dexterity*2;
 }
 
 
 public int getIntelligence() {
-    return intelligence;
+    return intelligence *2;
 }
 
 public int getCurrentLife() {
@@ -70,4 +80,7 @@ public void print(){
     System.out.println("Health: " + maxlife);
     
     
+}
+
+
 }
