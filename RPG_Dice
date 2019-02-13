@@ -1,17 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package _r_p_g;
+
+/**
+ *
+ * @author m304user
+ */
 import java.util.Random;
 public class Dice {
     
-    private Random rand = new Random();
-    int num = rand.nextInt(6);
-/**
-* Instantiate the object r
-*/
-public Dice() {
-}
-/**
-* Returns a random integer between 1 and 6
-*/
-public int roll() {
-    return this.num;
-}
+    private Random r;
+        public Dice(){
+            r = new Random(); //Calls the imported Random util, just like how you import Scanner;
+        }
+        public int roll(){
+            return r.nextInt(6)+1; //+1 is used so that Dice won't generate the number 0
+        }
 }
