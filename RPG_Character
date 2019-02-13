@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpg;
+package _r_p_g;
 
 /**
  *
- * @author PC 06
+ * @author m304user
  */
 public class Character {
+   
      static Dice die = new Dice();
     
 
@@ -30,13 +31,15 @@ public Character(String n, int s, int d, int i) {
 
 
 public int attack() {
-    int att = die.roll() + Strength + dexterity + intelligence ;
-    return att;
+    return die.roll() + Strength + dexterity + intelligence ;
+    
 }
 
 public void wound(int damage) {
-    int dam = attack();
+    int dam = damage ;
     this.currentlife -= dam;
+    if (currentlife <= 0){
+        currentlife=0;}
 }
 
 public void heal(int heal) {
@@ -84,3 +87,4 @@ public void print(){
 
 
 }
+
